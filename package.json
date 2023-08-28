@@ -5,7 +5,8 @@
   "main": "dist",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc"
+    "build": "tsc",
+    "publish": "publish --access public"
   },
   "keywords": [],
   "author": "M-307 (me@m307.dev)",
