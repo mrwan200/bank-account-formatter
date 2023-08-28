@@ -1,16 +1,28 @@
 {
-  "name": "bank-account-formatter",
+  "name": "@mrwan2546/bank-account-formatter",
   "version": "0.0.1",
-  "description": "",
-  "main": "index.js",
+  "description": "Simple format bank account address easier",
+  "main": "dist",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "M-307 (me@m307.dev)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrwan200/bank-account-formatter.git"
+  },
+  "files": [
+    "dist/**/*"
+  ],
   "devDependencies": {
     "nodemon": "^3.0.1",
     "typescript": "^5.2.2"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/mrwan200/bank-account-formatter/issues"
+  },
+  "homepage": "https://github.com/mrwan200/bank-account-formatter#readme"
 }
