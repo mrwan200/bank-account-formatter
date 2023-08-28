@@ -19,15 +19,19 @@ pnpm install git+https://github.com/mrwan200/bank-account-formatter
 const { parse } = require("./dist")
 
 const VALUE = "0488711222"
-console.log(`KBANK result: ${parse(VALUE, "kbank")}`);
-console.log(`SCB result: ${parse(VALUE, "scb")}`);
-console.log(`KTB result: ${parse(VALUE, "scb")}`);
+console.log(`KBANK result: ${parse(VALUE, "kbank")}`); // KBANK result: 048-8-71122-2
+console.log(`SCB result: ${parse(VALUE, "scb")}`); // SCB result: 048-8-71122-2
+console.log(`KTB result: ${parse(VALUE, "ktb")}`);  // KTB result: 048-8-71122-2
 
 // Or you can set strict mode to true if you not want someone has human error input
-console.log(`GSB result: ${parse(VALUE + '211', "gsb", true)}`); // Input length 12
-console.log(`GSB result: ${parse(VALUE, "gsb", true)}`); // Input length 10, But GSB need input length 12 digist
-console.log(`KBANK result: ${parse('12345', "kbank", true)}`); // Input length 5, But BAAC need input length 10 digist
-console.log(`KBANK result: ${parse('abc', "kbank", true)}`); // Input length 3 + aplhabet, But any bank doesn't support aplhabet account address 
+// Input length 12
+console.log(`GSB result: ${parse(VALUE + '21', "gsb", true)}`); // GSB result: 048-8-71122-221
+// Input length 10, But GSB need input length 12 digist
+console.log(`GSB result: ${parse(VALUE, "gsb", true)}`); // GSB result: null
+// Input length 5, But BAAC need input length 10 digist
+console.log(`KBANK result: ${parse('12345', "kbank", true)}`); // KBANK result: null
+ // Input length 3 + aplhabet, But any bank doesn't support aplhabet account address  
+console.log(`KBANK result: ${parse('abc', "kbank", true)}`); // KBANK result: null
 ```
 
 ## Reference
