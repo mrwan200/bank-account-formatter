@@ -1,6 +1,6 @@
 {
-  "name": "account-bank-formatter",
-  "version": "1.0.0",
+  "name": "bank-account-formatter",
+  "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
