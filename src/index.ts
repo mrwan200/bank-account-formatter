@@ -23,27 +23,27 @@ import { TBank } from "./interface/bank.interface";
 import { DEFAULT_FORMAT, format } from "./utils/format-pattern";
 
 function _parse(account_id: string, format: number[]) {
-  const acc: string[] = [];
-  let offset = 0;
-  for (const [idx, num] of format.entries()) {
-    acc.push(account_id.substring(offset, offset + num));
-    offset += num;
-  }
+    const acc: string[] = [];
+    let offset = 0;
+    for (const num of format) {
+        acc.push(account_id.substring(offset, offset + num));
+        offset += num;
+    }
 
-  return acc.join("-");
+    return acc.join("-");
 }
 
 export function parse(account_id: string, bank: TBank | null, strict = false) {
-  // Check strict first
-  if (strict) {
-    // Check if bank not exist return null it
-    if (!bank || !format[bank]) return null;
-    // Check input is not number
-    if(!Number(account_id)) return null;
-    // Check length not same
-    const len = format[bank].reduce((partialSum, a) => partialSum + a, 0);
-    if (len !== account_id.length) return null;
-  }
-  if (!bank) return _parse(account_id, DEFAULT_FORMAT);
-  return _parse(account_id, format[bank]);
+    // Check strict first
+    if (strict) {
+        // Check if bank not exist return null it
+        if (!bank || !format[bank]) return null;
+        // Check input is not number
+        if (!Number(account_id)) return null;
+        // Check length not same
+        const len = format[bank].reduce((partialSum, a) => partialSum + a, 0);
+        if (len !== account_id.length) return null;
+    }
+    if (!bank) return _parse(account_id, DEFAULT_FORMAT);
+    return _parse(account_id, format[bank]);
 }
