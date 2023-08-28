@@ -38,6 +38,8 @@ export function parse(account_id: string, bank: TBank | null, strict = false) {
   if (strict) {
     // Check if bank not exist return null it
     if (!bank || !format[bank]) return null;
+    // Check input is not number
+    if(!Number(account_id)) return null;
     // Check length not same
     const len = format[bank].reduce((partialSum, a) => partialSum + a, 0);
     if (len !== account_id.length) return null;
