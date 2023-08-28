@@ -4,6 +4,10 @@ A simple format bank account address to look pretty 🤠
 
 **Look pretty good huh**
 
+## Feature
+- Parse bank account to look pretty 
+- Typescript support
+
 ## Installtion
 ```sh
 # NPM
