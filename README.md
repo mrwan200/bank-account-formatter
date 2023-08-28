@@ -11,11 +11,11 @@ A simple format bank account address to look pretty 🤠
 ## Installtion
 ```sh
 # NPM
-npm install git+https://github.com/mrwan200/bank-account-formatter
+npm install @mrwan2546/bank-account-formatter
 # Yan
-yarn add git+https://github.com/mrwan200/bank-account-formatter
+yarn add @mrwan2546/bank-account-formatter
 # PNPM
-pnpm install git+https://github.com/mrwan200/bank-account-formatter
+pnpm install @mrwan2546/bank-account-formatter
 ```
 
 # Example useage
