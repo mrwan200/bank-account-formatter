@@ -12,7 +12,7 @@ export const format: Record<TBank, number[]> = {
   kkp: [3, 6, 1],
   cimbt: DEFAULT_FORMAT,
   tisco: [4, 3, 6, 1],
-  uob: [3, 3, 3, 2],
+  uob: [3, 3, 3, 1],
   baac: [3, 1, 5, 3],
   gsb: [3, 1, 5, 3],
   ghb: [3, 1, 5, 3],
